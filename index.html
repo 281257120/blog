@@ -64,6 +64,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-利用hexo搭建自己的博客网站" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/02/13/%E5%88%A9%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/" class="article-date">
+  <time datetime="2020-02-12T19:04:35.000Z" itemprop="datePublished">2020-02-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/02/13/%E5%88%A9%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">利用hexo搭建自己的博客网站</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>搭建自己博客网站方法</strong>：</p>
+<p><strong>1、准备工作：</strong><br>① 首先保证自己的电脑中有Node环境（下载Node即可）；<br>② 我用的git版本控制工具进行的指令操作（下载git即可）；<br>③ $ cnpm install hexo-cli -g  ；    在全局安装hexo-cli；<br>④ $ hexo init blog  创建一个blog文件夹；（此处速度可能较慢）</p>
+<p><strong>3、搭建自己的本地blog仓库；</strong><br>按照顺序输入指令：<br>$ cd blog<br> <em>//当前文件夹下；</em><br>$ cnpm install;<br> <em>//创建依赖；</em><br>$ hexo server<br><em>//可在本地启动服务预览</em></p>
+<p>指令及结果：<img src="https://img-blog.csdnimg.cn/20200213020147911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NuYWlsaWxp,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>4、配置远端服务器Git：</strong><br>① $ cnpm install hexo-deployer-git –save<br><em>//安装hexo-deployer-git 工具；</em></p>
+<p>② 登录<a href="https://github.com/" target="_blank" rel="noopener">github官网</a>创建一个新的仓库：<img src="https://img-blog.csdnimg.cn/20200213020838553.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NuYWlsaWxp,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200213020918787.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NuYWlsaWxp,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>③ 对配置文件进行更改：（只改这两处）<br><img src="https://img-blog.csdnimg.cn/20200213021246101.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020021302143092.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NuYWlsaWxp,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/20200213023056177.png" alt="在这里插入图片描述"></p>
+<p>更改后执行指令：<br>$ hexo g<br>$ hexo d</p>
+<p>执行成功后，刚才创建的远程仓库中，有下图系列文件：<br><img src="https://img-blog.csdnimg.cn/20200213023221121.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NuYWlsaWxp,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>④ 对远程仓库进行设置：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200213023242955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NuYWlsaWxp,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>勾选为master分支：<br><img src="https://img-blog.csdnimg.cn/20200213023254424.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NuYWlsaWxp,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>勾选后就就可以找到自己博客网站的连接了！！！<br><img src="https://img-blog.csdnimg.cn/20200213023327773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NuYWlsaWxp,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>5、上传自己的博客吧：</strong></p>
+<p>$ hexo new post one.md<br>在blog\source_posts\one-md.md文件中进行编辑即可；</p>
+<p>执行指令：传入远端；<br>$ hexo g<br>$ hexo d</p>
+<p>自己的博客轻松上传至网站中。</p>
+<p>具体hexo的操作方法可以到<a href="https://hexo.io/zh-tw/" target="_blank" rel="noopener">hexo官网</a>中进行学习；<br>md格式不会写的可以点<a href="http://coolaf.com/tool/md" target="_blank" rel="noopener">这里</a>直接转译。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/13/%E5%88%A9%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/" data-id="ck6jor5xj0000z8vx86gq9sb2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-one-md" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2020/02/13/one-md/" class="article-date">
@@ -195,6 +246,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2020/02/13/%E5%88%A9%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">利用hexo搭建自己的博客网站</a>
+          </li>
         
           <li>
             <a href="/blog/2020/02/13/one-md/">one.md</a>
